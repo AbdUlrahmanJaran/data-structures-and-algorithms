@@ -5,3 +5,7 @@
 <br>
 
 ## [Array Insert Shift README.md](./ArrayInsertShift/README.md)
+
+<br>
+
+## [Array Binary Search README.md](./ArrayBinarySearch/README.md)
