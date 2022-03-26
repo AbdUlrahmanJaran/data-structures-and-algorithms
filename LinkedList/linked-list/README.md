@@ -14,5 +14,10 @@ Create a Linked List class that contain three methods:
 
 ## API
 ``Insert`` : Takes value as a String and return nothing.
+<br>
+
 ``Includes`` : Takes value as a String and return True or False.
+
+<br>
+
 ``To String`` : didn't take any thing and return a Linked List as a String.
