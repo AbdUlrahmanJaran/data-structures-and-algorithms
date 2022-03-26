@@ -1,0 +1,16 @@
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\bin\Debug\net5.0\linked-list.exe
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\bin\Debug\net5.0\linked-list.deps.json
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\bin\Debug\net5.0\linked-list.runtimeconfig.json
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\bin\Debug\net5.0\linked-list.runtimeconfig.dev.json
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\bin\Debug\net5.0\linked-list.dll
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\bin\Debug\net5.0\linked-list.pdb
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.csproj.AssemblyReference.cache
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.AssemblyInfoInputs.cache
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.AssemblyInfo.cs
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.csproj.CoreCompileInputs.cache
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.dll
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\refint\linked-list.dll
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.pdb
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\linked-list.genruntimeconfig.cache
+C:\Users\user\data-structures-and-algorithms\LinkedList\linked-list\obj\Debug\net5.0\ref\linked-list.dll
