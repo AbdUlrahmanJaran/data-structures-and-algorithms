@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace linked_list
 {
-    class LinkedList
+    public class LinkedList
     {
         Node Head;
 
@@ -58,6 +58,79 @@ namespace linked_list
             }
 
             return result + "NULL";
+        }
+
+        public void Append(String newValue)
+        {
+            Node node = new Node(newValue);
+            Node last = Head;
+            if (Head == null)
+            {
+                Head = new Node(newValue);
+                return;
+            }
+            else
+            {
+                while (last.NextNode != null)
+                    last = last.NextNode;
+                last.NextNode = node;
+            }
+        }
+
+        public void InsertBefore(String value , String newValue)
+        {
+            Node current = Head;
+            Node newNode = new Node(newValue);
+            if (Head.value == value)
+            {
+                newNode.NextNode = Head;
+                Head = newNode;
+                return;
+            }
+
+            while (current.NextNode != null)
+            {
+                if (current.NextNode.value == value)
+                {
+                    newNode.NextNode = current.NextNode;
+                    current.NextNode = newNode;
+                    break;
+                }
+                current = current.NextNode;
+            }
+
+            if (current.NextNode == null)
+            {
+                Console.WriteLine(value+ " doesn't exist");
+            }
+        }
+
+        public void InsertAfter(String value, String newValue)
+        {
+            Node current = Head;
+            Node newNode = new Node(newValue);
+            if (Head.value == value)
+            {
+                newNode.NextNode = Head.NextNode;
+                Head.NextNode = newNode;
+                return;
+            }
+
+            while (current.value != null)
+            {
+                if (current.value == value)
+                {
+                    newNode.NextNode = current.NextNode;
+                    current.NextNode= newNode;
+                    break;
+                }
+                current = current.NextNode;
+                if (current == null)
+                {
+                    Console.WriteLine(value + " doesn't exist");
+                    break;
+                }
+            }
         }
     }
 }
