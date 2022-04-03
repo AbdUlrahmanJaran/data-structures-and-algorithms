@@ -22,6 +22,8 @@ namespace linked_list
             Console.WriteLine("I want to Insert '0' before '1'");
             list.InsertBefore("1", "0");
             Console.WriteLine(list.ToString());
+            Console.WriteLine(list.KthFromEnd(4));
+            
         }
     }
 }
