@@ -132,5 +132,30 @@ namespace linked_list
                 }
             }
         }
+
+        public string KthFromEnd(int k)
+        {
+            if (Head == null)
+                return "List is Empty!";
+            Node current = Head;
+            Node node = Head;
+            int counter = 0;
+            while (current.NextNode != null)
+            {
+                counter++;
+                current = current.NextNode;
+            }
+
+            while (node != null)
+            {
+                if (counter == k)
+                {
+                    return node.value;
+                }
+                counter--;
+                node = node.NextNode;
+            }
+            return "Exception";
+        }
     }
 }
