@@ -24,6 +24,21 @@ namespace linked_list
             Console.WriteLine(list.ToString());
             Console.WriteLine(list.KthFromEnd(4));
             
+            LinkedList list1 = new();
+            list1.Append("1");
+            list1.Append("2");
+            list1.Append("3");
+            Console.WriteLine(list1.ToString());
+
+            LinkedList list2 = new();
+            list2.Append("4");
+            list2.Append("5");
+            list2.Append("6");
+            Console.WriteLine(list2.ToString());
+
+            LinkedList zippedList = LinkedList.ZipList(list1, list2);
+            Console.WriteLine(zippedList.ToString());
+
         }
     }
 }

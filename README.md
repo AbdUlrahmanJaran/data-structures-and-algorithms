@@ -21,3 +21,7 @@
 <br>
 
 ## [Linked List Kth From End README](./LinkedList/linked-list/LinkedListKthREADME.md)
+
+<br>
+
+## [Linked List Zip README](./LinkedList/linked-list/LinkedListZipREADME.md)
