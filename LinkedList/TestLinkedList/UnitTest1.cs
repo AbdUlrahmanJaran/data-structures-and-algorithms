@@ -109,5 +109,48 @@ namespace TestLinkedList
             //Where the linked list is of a size 1
             Assert.Equal("1", list.KthFromEnd(0));
         }
+
+        [Fact]
+        public void TestZipList()
+        {
+            LinkedList list1 = new();
+            list1.Append("1");
+            list1.Append("3");
+            list1.Append("2");
+            //Here is the First Linked List
+            //"[1] -> [3] -> [2] -> NULL"
+
+            LinkedList list2 = new();
+            list2.Append("5");
+            list2.Append("9");
+            list2.Append("4");
+            //Here is the Second Linked List
+            //"[5] -> [9] -> [4] -> NULL"
+
+            LinkedList zippedList = LinkedList.ZipList(list1, list2);
+            //Where the linked lists are same Size
+            Assert.Equal("[1] -> [5] -> [3] -> [9] -> [2] -> [4] -> NULL", zippedList.ToString());
+        }
+
+        [Fact]
+        public void TestZipList2()
+        {
+            LinkedList list1 = new();
+            list1.Append("1");
+            list1.Append("3");
+            //Here is the First Linked List
+            //"[1] -> [3] -> NULL"
+
+            LinkedList list2 = new();
+            list2.Append("5");
+            list2.Append("9");
+            list2.Append("4");
+            //Here is the Second Linked List
+            //"[5] -> [9] -> [4] -> NULL"
+
+            LinkedList zippedList = LinkedList.ZipList(list1, list2);
+            //Where the linked lists are differnt Size
+            Assert.Equal("[1] -> [5] -> [3] -> [9] -> [4] -> NULL", zippedList.ToString());
+        }
     }
 }

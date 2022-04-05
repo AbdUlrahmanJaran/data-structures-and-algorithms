@@ -157,5 +157,32 @@ namespace linked_list
             }
             return "Exception";
         }
+
+        public static LinkedList ZipList(LinkedList firstList, LinkedList secondList)
+        {
+            LinkedList zipList = new LinkedList();
+            Node current1 = firstList.Head;
+            Node current2 = secondList.Head;
+            while (current1 != null && current2 != null)
+            {
+                zipList.Append(current1.value);
+                current1 = current1.NextNode;
+                zipList.Append(current2.value);
+                current2 = current2.NextNode;
+            }
+
+            while (current1 != null)
+            {
+                zipList.Append(current1.value);
+                current1 = current1.NextNode;
+            }
+
+            while (current2 != null)
+            {
+                zipList.Append(current2.value);
+                current2 = current2.NextNode;
+            }
+            return zipList;
+        }
     }
 }
