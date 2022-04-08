@@ -7,6 +7,69 @@ namespace TestLinkedList
     public class UnitTest1
     {
         [Fact]
+        public void TestEmptyList()
+        {
+            LinkedList list = new();
+            Assert.Equal("Nothing in the List", list.ToString());
+        }
+
+        [Fact]
+        public void TestInsert()
+        {
+            LinkedList list = new();
+            list.Insert("1");
+            Assert.Equal("[1] -> NULL", list.ToString());
+        }
+
+        [Fact]
+        public void TestHead()
+        {
+            LinkedList list = new();
+            list.Insert("1");
+            list.Insert("2");
+            Assert.Equal("2", list.Head.value);
+        }
+        [Fact]
+        public void TestInsertMultiple()
+        {
+            LinkedList list = new();
+            list.Insert("1");
+            list.Insert("2");
+            list.Insert("3");
+            Assert.Equal("[3] -> [2] -> [1] -> NULL", list.ToString());
+        }
+
+        [Fact]
+        public void TestIncludeTrue()
+        {
+            LinkedList list = new();
+            list.Insert("1");
+            list.Insert("2");
+            list.Insert("3");
+            Assert.True(list.Includes("2"));
+        }
+
+        [Fact]
+        public void TestIncludeFalse()
+        {
+            LinkedList list = new();
+            list.Insert("1");
+            list.Insert("2");
+            list.Insert("3");
+            Assert.False(list.Includes("4"));
+        }
+
+        [Fact]
+        public void TestReturnAllValues()
+        {
+            LinkedList list = new();
+            list.Insert("First");
+            list.Insert("Second");
+            list.Insert("Third");
+            Assert.Equal("[Third] -> [Second] -> [First] -> NULL", list.ToString());
+        }
+
+        [Fact]
         public void TestAddToEnd()
         {
             LinkedList list = new();
