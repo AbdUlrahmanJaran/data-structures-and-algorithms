@@ -13,4 +13,4 @@ ZipList method time complixity is O(n)
 To Zip two linked lists you shoud create a new linked list like:
 ``LinkedList zippedList = LinkedList.ZipList(list1, list2);``
 
-## Link to [Code](./LinkedList.cs)
+### Link to [Code](./LinkedList.cs)
