@@ -8,7 +8,7 @@ namespace linked_list
 {
     public class LinkedList
     {
-        Node Head;
+        public Node Head;
 
         public void Insert(String value)
         {
