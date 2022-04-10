@@ -1,0 +1,16 @@
+C:\Users\user\data-structures-and-algorithms\data-structures-project\bin\Debug\net5.0\data-structures-project.exe
+C:\Users\user\data-structures-and-algorithms\data-structures-project\bin\Debug\net5.0\data-structures-project.deps.json
+C:\Users\user\data-structures-and-algorithms\data-structures-project\bin\Debug\net5.0\data-structures-project.runtimeconfig.json
+C:\Users\user\data-structures-and-algorithms\data-structures-project\bin\Debug\net5.0\data-structures-project.runtimeconfig.dev.json
+C:\Users\user\data-structures-and-algorithms\data-structures-project\bin\Debug\net5.0\data-structures-project.dll
+C:\Users\user\data-structures-and-algorithms\data-structures-project\bin\Debug\net5.0\data-structures-project.pdb
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.csproj.AssemblyReference.cache
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.AssemblyInfoInputs.cache
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.AssemblyInfo.cs
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.csproj.CoreCompileInputs.cache
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.dll
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\refint\data-structures-project.dll
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.pdb
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\data-structures-project.genruntimeconfig.cache
+C:\Users\user\data-structures-and-algorithms\data-structures-project\obj\Debug\net5.0\ref\data-structures-project.dll
