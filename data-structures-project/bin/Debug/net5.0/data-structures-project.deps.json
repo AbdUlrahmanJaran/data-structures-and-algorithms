@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "data-structures-project/1.0.0": {
+        "runtime": {
+          "data-structures-project.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "data-structures-project/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
