@@ -29,3 +29,7 @@
 <br>
 
 ## [Stack & Queue README](./StackAndQueue/README.md)
+
+<br>
+
+## [StackQueuePsudo README](./StackQueuePseudo/README.md)
