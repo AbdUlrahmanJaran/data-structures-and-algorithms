@@ -131,5 +131,49 @@ namespace TestDataStructuresProject
             Assert.Throws<Exception>(queue.Peek);
             Assert.Throws<Exception>(queue.Dequeue);
         }
+
+        [Fact]
+        public void TestAnimalShelterCat()
+        {
+            AnimalShelter animalShelter = new AnimalShelter();
+            Animal cat1 = new Cat();
+            Animal cat2 = new Cat();
+            animalShelter.Enqueue(cat1);
+            animalShelter.Enqueue(cat2);
+            Assert.Equal("Cat 1", animalShelter.Dequeue("cat"));
+        }
+
+        [Fact]
+        public void TestAnimalShelterDog()
+        {
+            AnimalShelter animalShelter = new AnimalShelter();
+            Animal dog1 = new Dog();
+            Animal dog2 = new Dog();
+            animalShelter.Enqueue(dog1);
+            animalShelter.Enqueue(dog2);
+            Assert.Equal("Dog 1", animalShelter.Dequeue("dog"));
+        }
+
+        [Fact]
+        public void TestAnimalShelter()
+        {
+            AnimalShelter animalShelter = new AnimalShelter();
+            Animal dog = new Dog();
+            Animal cat = new Cat();
+            animalShelter.Enqueue(dog);
+            animalShelter.Enqueue(cat);
+            Assert.Equal("Cat 1", animalShelter.Dequeue("cat"));
+        }
+
+        [Fact]
+        public void TestAnimalShelterNull()
+        {
+            AnimalShelter animalShelter = new AnimalShelter();
+            Animal dog = new Dog();
+            Animal cat = new Cat();
+            animalShelter.Enqueue(dog);
+            animalShelter.Enqueue(cat);
+            Assert.Null(animalShelter.Dequeue("t"));
+        }
     }
 }
