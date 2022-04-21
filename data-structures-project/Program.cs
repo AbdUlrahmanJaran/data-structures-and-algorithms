@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace data_structures_project
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -29,18 +30,59 @@ namespace data_structures_project
             //pseudoQueue.Enqueue("4");
             //pseudoQueue.Dequeue();
 
-            AnimalShelter animalShelter = new AnimalShelter();
-            Animal cat = new Cat();
-            animalShelter.Enqueue(new Dog());
-            animalShelter.Enqueue(new Dog());
-            animalShelter.Enqueue(cat);
-            animalShelter.Enqueue(cat);
-            animalShelter.Enqueue(cat);
-            Console.WriteLine(animalShelter.Dequeue("cat"));
-            Console.WriteLine(animalShelter.Dequeue("cat"));
-            Console.WriteLine(animalShelter.Dequeue("dog"));
-            Console.WriteLine(animalShelter.Dequeue("at"));
+            //AnimalShelter animalShelter = new AnimalShelter();
+            //Animal cat = new Cat();
+            //animalShelter.Enqueue(new Dog());
+            //animalShelter.Enqueue(new Dog());
+            //animalShelter.Enqueue(cat);
+            //animalShelter.Enqueue(cat);
+            //animalShelter.Enqueue(cat);
+            //Console.WriteLine(animalShelter.Dequeue("cat"));
+            //Console.WriteLine(animalShelter.Dequeue("cat"));
+            //Console.WriteLine(animalShelter.Dequeue("dog"));
+            //Console.WriteLine(animalShelter.Dequeue("at"));
 
+            Console.Write(ValidateBrackets("{ } ()kk){ }"));
+
+        }
+
+        public static bool ValidateBrackets(string input)
+        {
+
+            char[] inputs = input.ToCharArray();
+            Stack<char> stack = new Stack<char>();
+            for (int i = 0; i < inputs.Length; i++)
+            {
+                if (inputs[i] == '(' || inputs[i] == '{' || inputs[i] == '[')
+                {
+                    stack.Push(inputs[i]);
+                }
+                if (inputs[i] == ')' || inputs[i] == '}' || inputs[i] == ']')
+                {
+                    if (stack.Count == 0)
+                    {
+                        return false;
+                    }
+                    else if(!isMatching(stack.Pop(),inputs[i]))
+                    {
+                        return false;
+                    }
+                }
+            }
+            if (!(stack.Count == 0))
+                return false;
+            return true;
+        }
+        static bool isMatching(char char1, char char2)
+        {
+            if (char1 == '(' && char2 == ')')
+                return true;
+            else if (char1 == '{' && char2 == '}')
+                return true;
+            else if (char1 == '[' && char2 == ']')
+                return true;
+            else
+                return false;
         }
     }
 }
