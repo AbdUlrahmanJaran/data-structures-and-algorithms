@@ -6,6 +6,7 @@ namespace TestDataStructuresProject
 {
     public class UnitTest1
     {
+        //Stack Tests
         [Fact]
         public void TestPush()
         {
@@ -69,6 +70,7 @@ namespace TestDataStructuresProject
             Assert.Throws<Exception>(stack.Pop);
         }
 
+        //Queue Tests
         [Fact]
         public void TestEnqueue()
         {
@@ -132,6 +134,7 @@ namespace TestDataStructuresProject
             Assert.Throws<Exception>(queue.Dequeue);
         }
 
+        //AnimalShelter Tests
         [Fact]
         public void TestAnimalShelterCat()
         {
@@ -174,6 +177,30 @@ namespace TestDataStructuresProject
             animalShelter.Enqueue(dog);
             animalShelter.Enqueue(cat);
             Assert.Null(animalShelter.Dequeue("t"));
+        }
+
+        //ValidateBrackets Tests
+        [Fact]
+        public void TestValidateBracketsTrue()
+        {
+            Assert.True(Program.ValidateBrackets("{}"));
+            Assert.True(Program.ValidateBrackets("{}(){}"));
+            Assert.True(Program.ValidateBrackets("(){}[[]]"));
+        }
+        [Fact]
+        public void TestValidateBracketsFalse()
+        {
+            Assert.False(Program.ValidateBrackets("[({}]"));
+            Assert.False(Program.ValidateBrackets("(]("));
+            Assert.False(Program.ValidateBrackets("{(})"));
+        }
+
+        [Fact]
+        public void TestValidateBracketsExtraChars()
+        {
+            Assert.True(Program.ValidateBrackets("()[[Extra Characters]]"));
+            Assert.True(Program.ValidateBrackets("{}{Code}[Fellows](())"));
+            Assert.False(Program.ValidateBrackets("[{Word]}"));
         }
     }
 }
