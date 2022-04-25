@@ -5,7 +5,7 @@ utilize 2 Stack instances to create and manage the queue
 create these methods: Enqueue, Dequeue.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![Stack Queue Pseudo](StackQueuePseudo.jpg)
 
 ## Approach & Efficiency
 Enqueue method time complixity is O(n)
@@ -17,3 +17,4 @@ To Enqueue or Dequeue you should create an object and call the method
 ``object1.Dequeue();``<br>
 
 ## Link to [Code](../data-structures-project/PseudoQueue.cs).
+## Link to [Test](../TestDataStructuresProject/UnitTest1.cs) from line 206 to 228.
