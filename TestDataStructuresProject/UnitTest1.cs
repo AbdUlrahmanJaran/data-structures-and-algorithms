@@ -202,5 +202,30 @@ namespace TestDataStructuresProject
             Assert.True(Program.ValidateBrackets("{}{Code}[Fellows](())"));
             Assert.False(Program.ValidateBrackets("[{Word]}"));
         }
+
+        //Test PsudoQueue
+        [Fact]
+        public void TestPseudoQueueEnqueue()
+        {
+            PseudoQueue pseudoQueue = new PseudoQueue();
+            pseudoQueue.Enqueue("5");
+            pseudoQueue.Enqueue("10");
+            pseudoQueue.Enqueue("15");
+            pseudoQueue.Enqueue("20");
+            Assert.Equal("5", pseudoQueue.Peek());
+        }
+
+        [Fact]
+        public void TestPseudoQueueDequeue()
+        {
+            PseudoQueue pseudoQueue = new PseudoQueue();
+            pseudoQueue.Enqueue("5");
+            pseudoQueue.Enqueue("10");
+            pseudoQueue.Enqueue("15");
+            pseudoQueue.Enqueue("20");
+            pseudoQueue.Dequeue();
+            Assert.Equal("10", pseudoQueue.Peek());
+        }
+
     }
 }

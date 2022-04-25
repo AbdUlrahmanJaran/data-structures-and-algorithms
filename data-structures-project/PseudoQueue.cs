@@ -37,5 +37,9 @@ namespace data_structures_project
             }
             
         }
+        public string Peek()
+        {
+            return stack1.Peek();
+        }
     }
 }
