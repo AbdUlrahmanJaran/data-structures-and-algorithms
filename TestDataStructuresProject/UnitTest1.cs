@@ -202,7 +202,7 @@ namespace TestDataStructuresProject
             Assert.True(Program.ValidateBrackets("{}{Code}[Fellows](())"));
             Assert.False(Program.ValidateBrackets("[{Word]}"));
         }
-
+        
         //Test PsudoQueue
         [Fact]
         public void TestPseudoQueueEnqueue()
