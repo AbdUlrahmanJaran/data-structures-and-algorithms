@@ -1,0 +1,16 @@
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.csproj.AssemblyReference.cache
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.AssemblyInfoInputs.cache
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.AssemblyInfo.cs
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.csproj.CoreCompileInputs.cache
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\bin\Debug\net5.0\Trees.exe
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\bin\Debug\net5.0\Trees.deps.json
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\bin\Debug\net5.0\Trees.runtimeconfig.json
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\bin\Debug\net5.0\Trees.runtimeconfig.dev.json
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\bin\Debug\net5.0\Trees.dll
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\bin\Debug\net5.0\Trees.pdb
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.dll
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\refint\Trees.dll
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.pdb
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\Trees.genruntimeconfig.cache
+C:\Users\user\data-structures-and-algorithms\Trees\Trees\obj\Debug\net5.0\ref\Trees.dll
