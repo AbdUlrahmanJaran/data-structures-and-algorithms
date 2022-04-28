@@ -8,7 +8,6 @@ namespace Trees
 {
     public class BinarySearchTree : BinaryTree
     {
-        public Node Root { get; set; }
         public BinarySearchTree()
         {
             Root = null;
