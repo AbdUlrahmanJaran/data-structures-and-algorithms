@@ -35,7 +35,7 @@ namespace TestTrees
             list.Add(10); //Root
             list.Add(8);  //Left
             list.Add(12); //Right
-            Assert.Equal(list, tree.PreOrder(tree));
+            Assert.Equal(list, tree.PreOrder());
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace TestTrees
             list.Add(1);
             list.Add(12); 
             list.Add(25); 
-            Assert.Equal(list, tree.PreOrder(tree));
+            Assert.Equal(list, tree.PreOrder());
         }
 
         [Fact]
@@ -77,7 +77,7 @@ namespace TestTrees
             list.Add(10);
             list.Add(12);
             list.Add(25);
-            Assert.Equal(list, tree.InOrder(tree));
+            Assert.Equal(list, tree.InOrder());
         }
 
         [Fact]
@@ -97,7 +97,7 @@ namespace TestTrees
             list.Add(25);
             list.Add(12);
             list.Add(10);
-            Assert.Equal(list, tree.PostOrder(tree));
+            Assert.Equal(list, tree.PostOrder());
         }
 
         [Fact]
@@ -109,6 +109,52 @@ namespace TestTrees
 
             Assert.True(tree.Contains(10));
             Assert.False(tree.Contains(12));
+        }
+
+        // Max Tests
+        [Fact]
+        public void TestTreeMax()
+        {
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(5);
+            tree.Root.left = new Node(10);
+            tree.Root.right = new Node(19);
+            tree.Root.left.left = new Node(180);
+            tree.Root.left.right = new Node(1);
+            tree.Root.right.left = new Node(3);
+            tree.Root.right.right = new Node(99);
+
+            Assert.Equal(180 ,tree.Max());
+        }
+
+        [Fact]
+        public void TestTreeMaxRoot()
+        {
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(200);
+            tree.Root.left = new Node(10);
+            tree.Root.right = new Node(19);
+            tree.Root.left.left = new Node(180);
+            tree.Root.left.right = new Node(1);
+            tree.Root.right.left = new Node(3);
+            tree.Root.right.right = new Node(99);
+
+            Assert.Equal(200, tree.Max());
+        }
+
+        [Fact]
+        public void TestTreeMaxLeaf()
+        {
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(10);
+            tree.Root.left = new Node(10);
+            tree.Root.right = new Node(19);
+            tree.Root.left.left = new Node(180);
+            tree.Root.left.right = new Node(1);
+            tree.Root.right.left = new Node(3);
+            tree.Root.right.right = new Node(200);
+
+            Assert.Equal(200, tree.Max());
         }
     }
 }

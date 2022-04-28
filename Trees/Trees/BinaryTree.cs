@@ -22,9 +22,9 @@ namespace Trees
         {
             Root = node;
         }
-        public List<int> PreOrder(BinarySearchTree binarySearchTree)
+        public List<int> PreOrder()
         {
-            PreOrder(binarySearchTree.Root);
+            PreOrder(Root);
             return preOrder;
         }
         
@@ -49,9 +49,9 @@ namespace Trees
             return preOrder;
         }
 
-        public List<int> InOrder(BinarySearchTree binarySearchTree)
+        public List<int> InOrder()
         {
-            InOrder(binarySearchTree.Root);
+            InOrder(Root);
             return inOrder;
         }
         private List<int> InOrder(Node root)
@@ -75,9 +75,9 @@ namespace Trees
             return inOrder;
         }
 
-        public List<int> PostOrder(BinarySearchTree binarySearchTree)
+        public List<int> PostOrder()
         {
-            PostOrder(binarySearchTree.Root);
+            PostOrder(Root);
             return postOrder;
         }
         private List<int> PostOrder(Node root)
@@ -99,6 +99,30 @@ namespace Trees
                 throw;
             }
             return postOrder;
+        }
+
+        int max;
+        public int Max()
+        {
+            Max(Root);
+            return max;
+        }
+
+        private int Max(Node root)
+        {
+            if (root.value > max)
+            {
+                max = root.value;
+            }
+            if (root.left != null)
+            {
+                Max(root.left);
+            }
+            if (root.right != null)
+            {
+                Max(root.right);
+            }
+            return max;
         }
     }
 }
