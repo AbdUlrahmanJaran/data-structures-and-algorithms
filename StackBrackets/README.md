@@ -2,7 +2,7 @@
 Write a function representing whether or not the brackets in a string are balanced.
 
 ## Whiteboard Process
-
+![Stack Brackets](StackBrackets.jpg)
 
 ## Approach & Efficiency
 ValidateBrackets function time complixity is O(n)
