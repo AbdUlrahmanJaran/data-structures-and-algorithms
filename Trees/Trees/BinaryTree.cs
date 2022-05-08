@@ -124,5 +124,31 @@ namespace Trees
             }
             return max;
         }
+
+        public static List<int> BreadthFirst(BinaryTree binaryTree)
+        {
+            List<int> breadthFirst = new List<int>();
+            Queue<Node> queue = new Queue<Node>();
+
+            queue.Enqueue(binaryTree.Root);
+
+            if (binaryTree.Root == null)
+                throw new Exception();
+
+            while (queue.Count != 0)
+            {
+
+                Node front = queue.Dequeue();
+                breadthFirst.Add(front.value);
+
+                if (front.left != null)
+                    queue.Enqueue(front.left);
+
+                if (front.right != null)
+                    queue.Enqueue(front.right);
+            }
+
+            return breadthFirst;
+        }
     }
 }
