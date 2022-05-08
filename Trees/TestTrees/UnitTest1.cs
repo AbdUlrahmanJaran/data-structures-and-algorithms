@@ -156,5 +156,43 @@ namespace TestTrees
 
             Assert.Equal(200, tree.Max());
         }
+
+        // BreadthFirst Test
+        [Fact]
+        public void TestBreadthFirst()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Root = new Node(2);
+            binaryTree.Root.left = new Node(7);
+            binaryTree.Root.right = new Node(5);
+            binaryTree.Root.left.left = new Node(2);
+            binaryTree.Root.left.right = new Node(6);
+            binaryTree.Root.left.right.left = new Node(5);
+            binaryTree.Root.left.right.right = new Node(11);
+            binaryTree.Root.right.right = new Node(9);
+            binaryTree.Root.right.right.left = new Node(4);
+
+            List<int> list = new List<int>();
+            // BreadthFirst should be: [2,7,5,2,6,9,5,11,4]
+            list.Add(2);
+            list.Add(7);
+            list.Add(5);
+            list.Add(2);
+            list.Add(6);
+            list.Add(9);
+            list.Add(5);
+            list.Add(11);
+            list.Add(4);
+
+            Assert.Equal(list, BinaryTree.BreadthFirst(binaryTree));
+        }
+
+        [Fact]
+        public void TestBreadthFirstNull()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+
+            Assert.Throws<Exception>(() => BinaryTree.BreadthFirst(binaryTree));
+        }
     }
 }
