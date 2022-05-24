@@ -183,24 +183,24 @@ namespace TestDataStructuresProject
         [Fact]
         public void TestValidateBracketsTrue()
         {
-            Assert.True(Program.ValidateBrackets("{}"));
-            Assert.True(Program.ValidateBrackets("{}(){}"));
-            Assert.True(Program.ValidateBrackets("(){}[[]]"));
+            Assert.True(Stack.ValidateBrackets("{}"));
+            Assert.True(Stack.ValidateBrackets("{}(){}"));
+            Assert.True(Stack.ValidateBrackets("(){}[[]]"));
         }
         [Fact]
         public void TestValidateBracketsFalse()
         {
-            Assert.False(Program.ValidateBrackets("[({}]"));
-            Assert.False(Program.ValidateBrackets("(]("));
-            Assert.False(Program.ValidateBrackets("{(})"));
+            Assert.False(Stack.ValidateBrackets("[({}]"));
+            Assert.False(Stack.ValidateBrackets("(]("));
+            Assert.False(Stack.ValidateBrackets("{(})"));
         }
 
         [Fact]
         public void TestValidateBracketsExtraChars()
         {
-            Assert.True(Program.ValidateBrackets("()[[Extra Characters]]"));
-            Assert.True(Program.ValidateBrackets("{}{Code}[Fellows](())"));
-            Assert.False(Program.ValidateBrackets("[{Word]}"));
+            Assert.True(Stack.ValidateBrackets("()[[Extra Characters]]"));
+            Assert.True(Stack.ValidateBrackets("{}{Code}[Fellows](())"));
+            Assert.False(Stack.ValidateBrackets("[{Word]}"));
         }
         
         //Test PsudoQueue
@@ -227,5 +227,27 @@ namespace TestDataStructuresProject
             Assert.Equal("10", pseudoQueue.Peek());
         }
 
+        //InsertionSort Test
+        [Fact]
+        public void TestInsertionSortNull()
+        {
+            int[] arr = { };
+            Assert.Null(SortingAlgorithms.InsertionSort(arr));
+        }
+
+        [Fact]
+        public void TestInsertionSortSortedArray()
+        {
+            int[] arr = { 1, 2, 5, 22, 100 };
+            Assert.Equal(arr, SortingAlgorithms.InsertionSort(arr));
+        }
+
+        [Fact]
+        public void TestInsertionSortReversedArray()
+        {
+            int[] arr = { 20, 18, 12, 8, 5, -2 };
+            int[] sortedArray = { -2, 5, 8, 12, 18, 20 };
+            Assert.Equal(sortedArray, SortingAlgorithms.InsertionSort(arr));
+        }
     }
 }

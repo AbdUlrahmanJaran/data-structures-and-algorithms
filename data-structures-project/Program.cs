@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace data_structures_project
 {
@@ -7,7 +8,7 @@ namespace data_structures_project
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Welcome to Data Structure Project");
+            Console.WriteLine("Welcome to Data Structure Project");
             //Stack stack = new Stack();
             //stack.Push("1");
             //stack.Push("2");
@@ -42,47 +43,17 @@ namespace data_structures_project
             //Console.WriteLine(animalShelter.Dequeue("dog"));
             //Console.WriteLine(animalShelter.Dequeue("at"));
 
-            Console.Write(ValidateBrackets("{ } ()kk){ }"));
+            //Console.Write(Stack.ValidateBrackets("{ } ()kk){ }"));
 
-        }
+            int[] arr = { 8, 4, 23, 42, 16, 15 };
+            int[] reverseSorted = { 20, 18, 12, 8, 5, -2 };
+            int[] fewUniques = { 5, 12, 7, 5, 5, 7 };
+            int[] nearlySorted = { 2, 3, 5, 7, 13, 11 };
 
-        public static bool ValidateBrackets(string input)
-        {
-
-            char[] inputs = input.ToCharArray();
-            Stack<char> stack = new Stack<char>();
-            for (int i = 0; i < inputs.Length; i++)
-            {
-                if (inputs[i] == '(' || inputs[i] == '{' || inputs[i] == '[')
-                {
-                    stack.Push(inputs[i]);
-                }
-                if (inputs[i] == ')' || inputs[i] == '}' || inputs[i] == ']')
-                {
-                    if (stack.Count == 0)
-                    {
-                        return false;
-                    }
-                    else if(!isMatching(stack.Pop(),inputs[i]))
-                    {
-                        return false;
-                    }
-                }
-            }
-            if (!(stack.Count == 0))
-                return false;
-            return true;
-        }
-        static bool isMatching(char char1, char char2)
-        {
-            if (char1 == '(' && char2 == ')')
-                return true;
-            else if (char1 == '{' && char2 == '}')
-                return true;
-            else if (char1 == '[' && char2 == ']')
-                return true;
-            else
-                return false;
+            Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(arr)));
+            Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(reverseSorted)));
+            Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(fewUniques)));
+            Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(nearlySorted)));
         }
     }
 }
