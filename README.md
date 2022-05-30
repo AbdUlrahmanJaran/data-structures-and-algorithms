@@ -56,8 +56,12 @@
 
 <br>
 
-## [InsertionSort README](./InsertionSort/README.md)
+## [InsertionSort README](./SortingAlgorithms/InsertionSort/README.md)
 
 <br>
 
 ## [MegeSort README](./SortingAlgorithms/MergeSort/README.md)
+
+<br>
+
+## [QuickSort README](./SortingAlgorithms/QuickSort/README.md)
