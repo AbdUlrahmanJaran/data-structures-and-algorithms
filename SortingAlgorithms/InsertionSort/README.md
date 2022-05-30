@@ -12,6 +12,6 @@ To use InsersionSort function you should have an array and bass it like this:
 
 ``SortingAlgorithms.InsertionSort(array);``
 
-## Link To [Code](../data-structures-project/SortingAlgorithms.cs) 
+## Link To [Code](../../data-structures-project/SortingAlgorithms.cs) 
 
 ## Link To [Blog](./BLOG.md)
