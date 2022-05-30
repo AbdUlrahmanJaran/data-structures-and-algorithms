@@ -54,12 +54,11 @@ namespace data_structures_project
             //Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(reverseSorted)));
             //Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(fewUniques)));
             //Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.InsertionSort(nearlySorted)));
-            
-            Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.MergeSort(arr)));
+
+            Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.QuickSort(arr, 0, arr.Length-1)));
             Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.MergeSort(reverseSorted)));
             Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.MergeSort(fewUniques)));
             Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.MergeSort(nearlySorted)));
-
 
         }
     }

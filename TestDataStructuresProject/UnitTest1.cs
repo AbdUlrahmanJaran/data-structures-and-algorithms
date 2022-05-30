@@ -272,5 +272,29 @@ namespace TestDataStructuresProject
             int[] arr = { 1, 2, 5, 22, 100 };
             Assert.Equal(arr, SortingAlgorithms.MergeSort(arr));
         }
+
+        //QuickSort Test
+        [Fact]
+        public void TestQuickSortNull()
+        {
+            int[] arr = { };
+            Assert.Null(SortingAlgorithms.QuickSort(arr, 0, arr.Length - 1));
+        }
+
+        [Fact]
+        public void TestQuickSortOddArray()
+        {
+            int[] arr = { 5, 12, 7, 5, 5, 7 };
+            int[] sortedArray = { 5, 5, 5, 7, 7, 12 };
+            Assert.Equal(sortedArray, SortingAlgorithms.QuickSort(arr, 0, arr.Length - 1));
+        }
+
+        [Fact]
+        public void TestMergeSortReversedArray()
+        {
+            int[] arr = { 20, 18, 12, 8, 5, -2 };
+            int[] sortedArray = { -2, 5, 8, 12, 18, 20 };
+            Assert.Equal(sortedArray, SortingAlgorithms.QuickSort(arr, 0, arr.Length - 1));
+        }
     }
 }
