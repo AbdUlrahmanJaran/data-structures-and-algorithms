@@ -12,4 +12,4 @@ To use MergeSort function you should have an array and bass it like this:
 
 ``SortingAlgorithms.MergeSort(array);``
 
-## Link To [Code](../data-structures-project/SortingAlgorithms.cs) 
+## Link To [Code](../../data-structures-project/SortingAlgorithms.cs) 
