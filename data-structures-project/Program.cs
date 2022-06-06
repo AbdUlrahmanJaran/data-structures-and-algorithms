@@ -60,6 +60,16 @@ namespace data_structures_project
             Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.MergeSort(fewUniques)));
             Console.WriteLine("[{0}]", String.Join(", ", SortingAlgorithms.MergeSort(nearlySorted)));
 
+            HashTable hash = new HashTable();
+            hash.Set("Goku", "Dragon Ball");
+            hash.Set("Luffy", "One Piece");
+            Console.WriteLine(hash.Get("Goku"));
+            Console.WriteLine(hash.Get("Luffy"));
+            Console.WriteLine(hash.Get("s"));
+            Console.WriteLine(hash.Contains("Luffy"));
+            Console.WriteLine(hash.Contains("s"));
+
+            Console.WriteLine("{0}", String.Join(", ", hash.Keys()));
         }
     }
 }

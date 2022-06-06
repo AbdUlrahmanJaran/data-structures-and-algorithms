@@ -65,3 +65,7 @@
 <br>
 
 ## [QuickSort README](./SortingAlgorithms/QuickSort/README.md)
+
+<br>
+
+## [HashTable README](./HashTable/README.md)
