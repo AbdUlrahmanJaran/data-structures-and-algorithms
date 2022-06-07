@@ -6,9 +6,9 @@ Implement a Hashtable Class with the following methods:
 {Set, Get, Contains, Keys and Hash}
 
 ## Approach & Efficiency
-time complexity
-Average Case is O(1)
-Worst Case is O(n)
+- Time complexity for `Set`, ``Get`` and ``Contains`` methods are O(n) while `n` = linked list nodes in specific index (collision).
+- Time complexity for `Keys` method is O(n*m) while `n` = Table length and `m` = linked list nodes in specific index (collision).
+- Time complexity for `Hash` method is O(n) while `n` = key length.
 
 ## API
 1. ``Set`` take key and value as strings.
