@@ -46,19 +46,19 @@ mid = 2
 left = [8,4,23]
 right = [42,16,15]
 ```
-![Pase 1](./pase1.jpg)
+![Pase 1](./Pase1.jpg)
 Find the middle index of the array and Divide the array from the middle.
 
 ### pase 2:
-![Pase 2](./pase2.jpg)
+![Pase 2](./Pase2.jpg)
 Call merge sort for each half two times.
 
 ### pase 3:
-![Pase 3](./pase3.jpg)
+![Pase 3](./Pase3.jpg)
 Sort and merge by Merge function.
 
 ### pase 4:
-![Pase 4](./pase4.jpg)
+![Pase 4](./Pase4.jpg)
 Merge the two sorted halves into a single sorted array.
 
 ## Efficency
