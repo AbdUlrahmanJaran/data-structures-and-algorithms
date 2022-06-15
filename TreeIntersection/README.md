@@ -13,3 +13,4 @@ Using Hashmap implementation as a part of your algorithm, return a set of values
 To find common values in 2 binary trees you could write:
 ``TreeIntersection.Tree_Intersection(FirstTree, SecondTree).ForEach(Console.WriteLine);``
 
+## Link to [Code](../data-structures-project/TreeIntersection.cs).
