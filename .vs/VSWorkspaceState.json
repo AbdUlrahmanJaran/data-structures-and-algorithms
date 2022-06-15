@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\data-structures-project",
     "\\LinkedList",
     "\\StackQueuePseudo",
-    "\\Trees"
+    "\\Trees",
+    "\\Trees\\Trees"
   ],
-  "SelectedNode": "\\Trees",
+  "SelectedNode": "\\Trees\\Trees\\Trees.sln",
   "PreviewInSolutionExplorer": false
 }
