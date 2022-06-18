@@ -104,6 +104,21 @@ namespace data_structures_project
 
             TreeIntersection.Tree_Intersection(binaryTree, binaryTree2).ForEach(Console.WriteLine);
 
+            HashTable synonyms = new HashTable();
+            synonyms.Set("diligent", "employed");
+            synonyms.Set("fond", "enamored");
+            synonyms.Set("guide", "usher");
+            synonyms.Set("outfit", "garb");
+            synonyms.Set("wrath", "anger");
+
+            HashTable antonyms = new HashTable();
+            antonyms.Set("diligent", "idle");
+            antonyms.Set("fond", "averse");
+            antonyms.Set("guide", "follow");
+            antonyms.Set("flow", "jam");
+            antonyms.Set("wrath", "delight");
+
+            HashTable.LeftJoin(synonyms, antonyms).ForEach(Console.WriteLine);
         }
     }
 }
