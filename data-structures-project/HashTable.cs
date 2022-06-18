@@ -98,5 +98,21 @@ namespace data_structures_project
             
             return "nothing repeated";
         }
+
+        public static List<string> LeftJoin(HashTable firstHashTable, HashTable secondHashTable)
+        { 
+            List<string> leftJoin = new List<string>();
+
+            List<string> keys = firstHashTable.Keys();
+            foreach (string key in keys)
+            {
+                string row = "(" + key + " , " + firstHashTable.Get(key);
+                row += (secondHashTable.Get(key) == null) ? " , NULL)" : " , " + secondHashTable.Get(key) + ")";
+
+                leftJoin.Add(row);
+            }
+
+            return leftJoin;
+        }
     }
 }

@@ -390,5 +390,75 @@ namespace TestDataStructuresProject
         {
             Assert.Equal("summer", HashTable.RepeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
         }
+
+        //LeftJoinTest
+        [Fact]
+        public void TestLeftJoinFoundAll()
+        {
+            HashTable synonyms = new HashTable();
+            synonyms.Set("diligent", "employed");
+            synonyms.Set("fond", "enamored");
+            synonyms.Set("guide", "usher");
+
+            HashTable antonyms = new HashTable();
+            antonyms.Set("diligent", "idle");
+            antonyms.Set("fond", "averse");
+            antonyms.Set("guide", "follow");
+
+            List<string> result = new List<string>();
+            result.Add("(diligent , employed , idle)");
+            result.Add("(fond , enamored , averse)");
+            result.Add("(guide , usher , follow)");
+
+            Assert.Equal(result, HashTable.LeftJoin(synonyms, antonyms));
+        }
+
+        [Fact]
+        public void TestLeftJoinNulls()
+        {
+            HashTable synonyms = new HashTable();
+            synonyms.Set("diligent", "employed");
+            synonyms.Set("fond", "enamored");
+            synonyms.Set("guide", "usher");
+            synonyms.Set("outfit", "garb");
+            synonyms.Set("wrath", "anger");
+
+            HashTable antonyms = new HashTable();
+            antonyms.Set("diligent", "idle");
+            antonyms.Set("fond", "averse");
+            antonyms.Set("guide", "follow");
+            antonyms.Set("flow", "jam");
+            antonyms.Set("wrath", "delight");
+
+            List<string> result = new List<string>();
+            result.Add("(wrath , anger , delight)");
+            result.Add("(outfit , garb , NULL)");
+            result.Add("(diligent , employed , idle)");
+            result.Add("(fond , enamored , averse)");
+            result.Add("(guide , usher , follow)");
+
+            Assert.Equal(result, HashTable.LeftJoin(synonyms, antonyms));
+        }
+
+        [Fact]
+        public void TestLeftJoinSameValue()
+        {
+            HashTable Anime = new HashTable();
+            Anime.Set("One Piece", "Luffy");
+            Anime.Set("Hunter X Hunter", "Gon");
+            Anime.Set("Dragon Ball", "Goku");
+
+            HashTable Rating = new HashTable();
+            Rating.Set("One Piece", "Better");
+            Rating.Set("Hunter X Hunter", "Best");
+            Rating.Set("Dragon Ball", "Goku");
+
+            List<string> result = new List<string>();
+            result.Add("(One Piece , Luffy , Better)");
+            result.Add("(Dragon Ball , Goku , Goku)");
+            result.Add("(Hunter X Hunter , Gon , Best)");
+
+            Assert.Equal(result, HashTable.LeftJoin(Anime, Rating));
+        }
     }
 }
