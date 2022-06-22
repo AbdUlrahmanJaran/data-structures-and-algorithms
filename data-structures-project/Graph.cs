@@ -79,5 +79,30 @@ namespace data_structures_project
         {
             return graph.Count;
         }
+
+        public List<Node> BreadthFirst(Node node)
+        {
+            List<Node> nodes = new List<Node>();
+            Queue<Node> breadth = new Queue<Node>();
+            List<Node> visited = new List<Node>();
+
+            breadth.Enqueue(node);
+            visited.Add(node);
+
+            while (breadth.Count > 0)
+            {
+                Node front = breadth.Dequeue();
+                nodes.Add(front);
+                foreach (Node neighbor in GetNeighbors(front))
+                {
+                    if (!visited.Contains(neighbor))
+                    {
+                        visited.Add(neighbor);
+                        breadth.Enqueue(neighbor);
+                    }
+                }
+            }
+            return nodes;
+        }
     }
 }

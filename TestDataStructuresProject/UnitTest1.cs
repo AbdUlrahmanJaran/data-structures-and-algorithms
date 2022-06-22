@@ -562,5 +562,49 @@ namespace TestDataStructuresProject
 
             Assert.Null(graph.GetNodes());
         }
+
+        //BreadthFirst Test
+        [Fact]
+        public void TestGraphBreadthFirst()
+        {
+            Graph graph = new Graph();
+            Node node1 = new Node("A");
+            Node node2 = new Node("E");
+            Node node3 = new Node("C");
+            Node node4 = new Node("D");
+
+            graph.AddNode(node1.value);
+            graph.AddNode(node2.value);
+            graph.AddNode(node3.value);
+            graph.AddNode(node4.value);
+
+            graph.AddEdge(node1, node3);
+            graph.AddEdge(node1, node2);
+            graph.AddEdge(node4, node2);
+
+            List<Node> nodes = new List<Node>();
+            nodes.Add(node2);
+            nodes.Add(node1);
+            nodes.Add(node4);
+            nodes.Add(node3);
+
+            Assert.Equal(nodes ,graph.BreadthFirst(node2));
+        }
+
+        [Fact]
+        public void TestGraphBFirstNotFound()
+        {
+            Graph graph = new Graph();
+            Node node1 = new Node("A");
+            Node node2 = new Node("E");
+            Node node3 = new Node("C");
+            Node node4 = new Node("D");
+
+            graph.AddNode(node1.value);
+            graph.AddNode(node2.value);
+            graph.AddNode(node4.value);
+
+            Assert.Throws<Exception>(() => graph.BreadthFirst(node3));
+        }
     }
 }

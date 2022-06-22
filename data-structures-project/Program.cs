@@ -121,30 +121,39 @@ namespace data_structures_project
             HashTable.LeftJoin(synonyms, antonyms).ForEach(Console.WriteLine);
 
             Graph graph = new Graph();
-            graph.AddNode("A");
-            graph.AddNode("B");
-            graph.AddNode("C");
-            graph.AddNode("D");
-            graph.AddNode("E");
-            graph.AddNode("F");
-            graph.AddNode("G");
+            Node node1 = new Node("A");
+            Node node2 = new Node("B");
+            Node node3 = new Node("C");
+            Node node4 = new Node("D");
+            Node node5 = new Node("E");
 
-            graph.AddEdge(new Node("C"), new Node("G"));
-            graph.AddEdge(new Node("D"), new Node("C"));
-            graph.AddEdge(new Node("E"), new Node("C"));
-            graph.AddEdge(new Node("A"), new Node("G"));
+
+            graph.AddNode(node1.value);
+            graph.AddNode(node2.value);
+            graph.AddNode(node3.value);
+            graph.AddNode(node4.value);
+            graph.AddNode(node5.value);
+
+            graph.AddEdge(node3, node2);
+            graph.AddEdge(node4, node3);
+            graph.AddEdge(node5, node3);
+            graph.AddEdge(node1, node2);
 
             foreach (var item in graph.GetNodes())
             {
                 Console.WriteLine(item.value);
             }
             string s = "";
-            foreach (var item in graph.GetNeighbors(new Node("C")))
+            foreach (var item in graph.GetNeighbors(node3))
             {
                 s += item.value + ", ";
             }
             Console.WriteLine(s);
             Console.WriteLine(graph.Size());
+            foreach (var item in graph.BreadthFirst(node3))
+            {
+                Console.WriteLine(item.value);
+            }
         }
     }
 }
