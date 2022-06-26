@@ -391,6 +391,67 @@ namespace TestDataStructuresProject
             Assert.Equal("summer", HashTable.RepeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
         }
 
+        //TreeIntersectionTest
+        [Fact]
+        public void TestTreeIntersection()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Root = new TreeNode(1);
+            binaryTree.Root.left = new TreeNode(7);
+            binaryTree.Root.right = new TreeNode(5);
+            binaryTree.Root.left.left = new TreeNode(9);
+            binaryTree.Root.left.right = new TreeNode(6);
+            binaryTree.Root.right.right = new TreeNode(10);
+
+            BinaryTree binaryTree2 = new BinaryTree();
+            binaryTree2.Root = new TreeNode(2);
+            binaryTree2.Root.left = new TreeNode(7);
+            binaryTree2.Root.right = new TreeNode(5);
+            binaryTree2.Root.left.left = new TreeNode(2);
+            binaryTree2.Root.left.right = new TreeNode(6);
+            binaryTree2.Root.right.right = new TreeNode(10);
+
+            List<int> result = new List<int>();
+            result.Add(7);
+            result.Add(6);
+            result.Add(5);
+            result.Add(10);
+
+            Assert.Equal(result , TreeIntersection.Tree_Intersection(binaryTree, binaryTree2));
+        }
+
+        [Fact]
+        public void TestTreeIntersectionFirstEmpty()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+
+            BinaryTree binaryTree2 = new BinaryTree();
+            binaryTree2.Root = new TreeNode(2);
+            binaryTree2.Root.left = new TreeNode(7);
+            binaryTree2.Root.right = new TreeNode(5);
+            binaryTree2.Root.left.left = new TreeNode(2);
+            binaryTree2.Root.left.right = new TreeNode(6);
+            binaryTree2.Root.right.right = new TreeNode(10);
+
+            Assert.Throws<NullReferenceException>(() => TreeIntersection.Tree_Intersection(binaryTree, binaryTree2));
+        }
+
+        [Fact]
+        public void TestTreeIntersectionSecondEmpty()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Root = new TreeNode(1);
+            binaryTree.Root.left = new TreeNode(7);
+            binaryTree.Root.right = new TreeNode(5);
+            binaryTree.Root.left.left = new TreeNode(9);
+            binaryTree.Root.left.right = new TreeNode(6);
+            binaryTree.Root.right.right = new TreeNode(10);
+
+            BinaryTree binaryTree2 = new BinaryTree();
+
+            Assert.Throws<NullReferenceException>(() => TreeIntersection.Tree_Intersection(binaryTree, binaryTree2));
+        }
+
         //LeftJoinTest
         [Fact]
         public void TestLeftJoinFoundAll()
