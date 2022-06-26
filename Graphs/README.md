@@ -30,4 +30,4 @@ Implement a Graph Class with the following methods:
  Returns the total number of nodes in the graph (int)
 
 ## Link to [Code](../data-structures-project/Graph.cs)
-## Link to [Test](../TestDataStructuresProject/UnitTest1.cs) Line 470
+## Link to [Test](../TestDataStructuresProject/UnitTest1.cs) Line 525

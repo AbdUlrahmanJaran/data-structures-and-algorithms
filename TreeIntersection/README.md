@@ -4,7 +4,7 @@ Write a function called ``tree_intersection`` that takes two binary trees as par
 Using Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
 
 ## Whiteboard Process
-
+![Tree Intersection](TreeIntersection.jpg)
 
 ## Approach & Efficiency
 ``HashTableInsert`` and ``HashTableContains`` depends on PreOrder traversal of a tree so Time complexity for them is O(n).
