@@ -10,5 +10,6 @@ Write a function that LEFT JOINs two hashmaps into a single data structure.
 LeftJoin function time complixity is O(n)
 
 ## Solution
+![Whiteboard](./LeftJoinHashTable.jpg)
 
 ## Link to [Code](../data-structures-project/HashTable.cs).
