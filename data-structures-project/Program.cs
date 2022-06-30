@@ -102,7 +102,7 @@ namespace data_structures_project
             binaryTree2.Root.right.right = new TreeNode(10);
             binaryTree2.Root.right.right.left = new TreeNode(4);
 
-            TreeIntersection.Tree_Intersection(binaryTree, binaryTree2).ForEach(Console.WriteLine);
+            //TreeIntersection.Tree_Intersection(binaryTree, binaryTree2).ForEach(Console.WriteLine);
 
             HashTable synonyms = new HashTable();
             synonyms.Set("diligent", "employed");
@@ -118,7 +118,7 @@ namespace data_structures_project
             antonyms.Set("flow", "jam");
             antonyms.Set("wrath", "delight");
 
-            HashTable.LeftJoin(synonyms, antonyms).ForEach(Console.WriteLine);
+            //HashTable.LeftJoin(synonyms, antonyms).ForEach(Console.WriteLine);
 
             Graph graph = new Graph();
             Node node1 = new Node("A");
@@ -134,10 +134,10 @@ namespace data_structures_project
             graph.AddNode(node4.value);
             graph.AddNode(node5.value);
 
-            graph.AddEdge(node3, node2);
-            graph.AddEdge(node4, node3);
-            graph.AddEdge(node5, node3);
-            graph.AddEdge(node1, node2);
+            graph.AddEdge(node3, node2 , 5);
+            graph.AddEdge(node4, node3 , 7);
+            graph.AddEdge(node5, node3 , 9);
+            graph.AddEdge(node1, node2 , 2);
 
             foreach (var item in graph.GetNodes())
             {
@@ -146,7 +146,7 @@ namespace data_structures_project
             string s = "";
             foreach (var item in graph.GetNeighbors(node3))
             {
-                s += item.value + ", ";
+                s += item.Node.value + ", ";
             }
             Console.WriteLine(s);
             Console.WriteLine(graph.Size());
@@ -154,6 +154,8 @@ namespace data_structures_project
             {
                 Console.WriteLine(item.value);
             }
+
+            Console.WriteLine(Graph.BusinessTrip(graph, new string [] {"A", "E"}));
         }
     }
 }

@@ -8,26 +8,28 @@ namespace data_structures_project
 {
     public class Graph
     {
-        List<List<Node>> graph = new List<List<Node>>();
-
+        List<List<Edge>> graph = new List<List<Edge>>();
+        
         public Node AddNode(string value)
         {
-            List<Node> row = new List<Node>();
             Node node = new Node(value);
-            row.Add(node);
+            List<Edge> row = new List<Edge>();
+            Edge edge = new Edge(node);
+            row.Add(edge);
             graph.Add(row);
-            return row.First();
+            return row.First().Node;
         }
 
-        public void AddEdge(Node node1, Node node2)
+        public void AddEdge(Node node1, Node node2 ,int wight)
         {
             try
             {
-                List<Node> firstNodeRow = graph.Find(row => row.First().value == node1.value);
-                firstNodeRow.Add(node2);
+                List<Edge> firstNodeRow = graph.Find(row => row.First().Node.value == node1.value);
+                firstNodeRow.Add(new Edge(node2, wight));
+                
+                List<Edge> secondNode = graph.Find(x => x.First().Node.value == node2.value);
+                secondNode.Add(new Edge(node1, wight));
 
-                List<Node> secondNode = graph.Find(x => x.First().value == node2.value);
-                secondNode.Add(node1);
             }
             catch (Exception e)
             {
@@ -39,9 +41,9 @@ namespace data_structures_project
         {
             List<Node> nodes = new List<Node>();
 
-            foreach (List<Node> row in graph)
+            foreach (List<Edge> row in graph)
             {
-                nodes.Add(row.First());
+                nodes.Add(row.First().Node);
             }
 
             if (nodes.Count == 0)
@@ -50,15 +52,15 @@ namespace data_structures_project
             return nodes;
         }
 
-        public List<Node> GetNeighbors(Node node)
+        public List<Edge> GetNeighbors(Node node)
         {
-            List<Node> neighbors = new List<Node>();
+            List<Edge> neighbors = new List<Edge>();
             try
             {
-                List<Node> row = graph.Find(x => x.First().value == node.value);
-                foreach (Node neighbor in row)
+                List<Edge> row = graph.Find(x => x.First().Node.value == node.value);
+                foreach (Edge neighbor in row)
                 {
-                    if (neighbor.value != node.value)
+                    if (neighbor.Node.value != node.value)
                     {
                         neighbors.Add(neighbor);
                     }
@@ -93,16 +95,57 @@ namespace data_structures_project
             {
                 Node front = breadth.Dequeue();
                 nodes.Add(front);
-                foreach (Node neighbor in GetNeighbors(front))
+                foreach (Edge neighbor in GetNeighbors(front))
                 {
-                    if (!visited.Contains(neighbor))
+                    if (!visited.Contains(neighbor.Node))
                     {
-                        visited.Add(neighbor);
-                        breadth.Enqueue(neighbor);
+                        visited.Add(neighbor.Node);
+                        breadth.Enqueue(neighbor.Node);
                     }
                 }
             }
             return nodes;
+        }
+
+        public static string BusinessTrip(Graph graph, string[] cities)
+        {
+            int result = 0;
+            if(graph == null || cities == null)
+            {
+                return null;
+            }
+            for (int i = 0; i < cities.Length - 1; i++)
+            {
+                try
+                {
+                    Node node = new Node(cities[i]);
+                    Node next = new Node(cities[i + 1]);
+                    List<Edge> nodeEdges = graph.GetNeighbors(node);
+                    
+                    result += nodeEdges.Find(e => e.Node.value == next.value).Weight;
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
+            return "$"+result;
+        }
+    }
+
+    public class Edge
+    {
+        public Node Node { get; set; }
+        public int Weight { get; set; }
+
+        public Edge(Node node, int weight)
+        {
+            Node = node;
+            Weight = weight;
+        }
+        public Edge(Node node)
+        {
+            Node = node;
         }
     }
 }

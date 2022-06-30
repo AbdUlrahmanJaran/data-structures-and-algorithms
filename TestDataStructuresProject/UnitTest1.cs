@@ -541,7 +541,7 @@ namespace TestDataStructuresProject
 
             Node node1 = new Node("45");
             Node node2 = new Node("22");
-            graph.AddEdge(node1 , node2);
+            graph.AddEdge(node1 , node2 , 2);
 
             Assert.NotNull(graph.GetNeighbors(node1));
         }
@@ -580,9 +580,9 @@ namespace TestDataStructuresProject
             Node node4 = new Node("D");
 
 
-            graph.AddEdge(node1, node2);
-            graph.AddEdge(node3, node1);
-            graph.AddEdge(node4, node1);
+            graph.AddEdge(node1, node2, 2);
+            graph.AddEdge(node3, node1, 5);
+            graph.AddEdge(node4, node1, 7);
 
             List<Node> result = new List<Node>();
             result.Add(node2);
@@ -610,7 +610,7 @@ namespace TestDataStructuresProject
             graph.AddNode("A");
 
             Node node = new Node("A");
-            graph.AddEdge(node , node);
+            graph.AddEdge(node , node , 2);
 
             Assert.NotNull(graph.GetNodes());
             Assert.Null(graph.GetNeighbors(node));
@@ -639,9 +639,9 @@ namespace TestDataStructuresProject
             graph.AddNode(node3.value);
             graph.AddNode(node4.value);
 
-            graph.AddEdge(node1, node3);
-            graph.AddEdge(node1, node2);
-            graph.AddEdge(node4, node2);
+            graph.AddEdge(node1, node3 , 2);
+            graph.AddEdge(node1, node2, 4);
+            graph.AddEdge(node4, node2, 7);
 
             List<Node> nodes = new List<Node>();
             nodes.Add(node2);
